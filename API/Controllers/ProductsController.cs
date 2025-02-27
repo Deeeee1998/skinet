@@ -49,7 +49,7 @@ public class ProductsController: ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("{int:id}")]
+    [HttpDelete("{id:int}")]
     public async Task<ActionResult> DeleteProduct(int id)
     {
         var product = await context.Products.FindAsync(id);
